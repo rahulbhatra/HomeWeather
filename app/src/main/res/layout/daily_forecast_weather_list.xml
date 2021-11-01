@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dailyForecastList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_background">
+
+
+    <TextView
+        android:id="@+id/dailyForecastUvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="UV Index: 2"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastPrecipitation" />
+
+    <TextView
+        android:id="@+id/dailyForecastPrecipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="(0% precip.)"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastWeatherDesc" />
+
+    <TextView
+        android:id="@+id/dailyForecastTempRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="72 C"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastTime" />
+
+    <ImageView
+        android:id="@+id/dailyForecastWeatherIcon"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastTime"
+        app:srcCompat="@drawable/_01d"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/dailyForecastWeatherDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="Broken Clouds (75% Clouds)"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastTempRange" />
+
+    <TextView
+        android:id="@+id/dailyForecastTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#8D5EE1"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:text="Time"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/dayTimeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastDayGroup">
+
+        <TextView
+            android:id="@+id/dailyForecastMorningTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="8 am"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/dailyForecastDayTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="1 pm"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/dailyForecastEveningTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="5 pm"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/dailyForecastNightTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="11 pm"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/dailyForecastDayGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyForecastUvi">
+
+        <TextView
+            android:id="@+id/dailyForecastMorningTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="66 F"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dailyForecastDayTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="72 F"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dailyForecastEveningTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="71 F"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dailyForecastNightTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="68 F"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

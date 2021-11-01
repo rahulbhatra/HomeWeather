@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OpenWeather</string>
+    <string name="no_network_connection">No Network Connection</string>
+    <string name="unit">unit</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="locale">locale</string>
+    <string name="weather">weather</string>
+    <string name="metric">metric</string>
+    <string name="imperial">imperial</string>
+    <string name="centigrade">Centigrade</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="location">Location</string>
+    <string name="item">Item</string>
+</resources>
